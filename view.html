@@ -100,7 +100,7 @@
         } else {
             document.getElementById('title').textContent = filename.replace('.md', '');
             
-            fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/main/${filename}`)
+            fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/main/articles/${filename}`)
                 .then(response => {
                     if (!response.ok) throw new Error('文件不存在');
                     return response.text();
